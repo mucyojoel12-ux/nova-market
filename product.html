@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Product Details</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+Nova Market 🛒
+</div>
+
+</header>
+
+
+
+
+<section class="product-page">
+
+
+<img id="image">
+
+
+<div class="info">
+
+
+<h1 id="name"></h1>
+
+<h2 id="price"></h2>
+
+<p id="description"></p>
+
+
+<button>
+<button onclick="addToCart(data[product].name, data[product].price)">
+Add To Cart 🛒
+</button>
+
+
+
+<button>
+Buy Now ⚡
+</button>
+<script src="script.js"></script>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<script>
+
+
+let product =
+new URLSearchParams(window.location.search).get("product");
+
+
+
+let data={
+
+
+phone:{
+name:"Smart Phone",
+price:"$500",
+image:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+description:"Powerful smartphone with modern camera and long battery."
+},
+
+
+watch:{
+name:"Smart Watch",
+price:"$120",
+image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+description:"Smart watch for fitness and daily activities."
+},
+
+
+shoes:{
+name:"Running Shoes",
+price:"$80",
+image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+description:"Comfortable shoes for running."
+},
+
+
+laptop:{
+name:"Laptop",
+price:"$900",
+image:"https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+description:"Fast laptop for work and study."
+},
+
+
+clothes:{
+name:"Fashion Clothes",
+price:"$50",
+image:"https://images.unsplash.com/photo-1593032465175-481ac7f401a0",
+description:"Modern stylish clothes."
+}
+
+
+};
+
+
+
+document.getElementById("image").src=data[product].image;
+
+document.getElementById("name").innerHTML=data[product].name;
+
+document.getElementById("price").innerHTML=data[product].price;
+
+document.getElementById("description").innerHTML=data[product].description;
+
+
+
+</script>
+
+
+</body>
+
+</html>

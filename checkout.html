@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Checkout - Nova Market</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+Nova Market 🛒
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="cart.html">Cart 🛒</a>
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<section class="checkout">
+
+
+<h1>
+Complete Your Order 🚚
+</h1>
+
+
+
+<input 
+type="text"
+id="customerName"
+placeholder="Full Name">
+
+
+
+<input 
+type="text"
+id="phone"
+placeholder="Phone Number">
+
+
+
+<input 
+type="text"
+id="address"
+placeholder="Delivery Address">
+
+
+
+
+
+<h2>
+Payment Method
+</h2>
+
+
+
+<select id="payment">
+
+
+<option>
+Mobile Money (MoMo Pay)
+</option>
+
+
+<option>
+Bank Card
+</option>
+
+
+<option>
+Bank Transfer
+</option>
+
+
+</select>
+
+
+
+
+<button onclick="placeOrder()">
+
+Place Order ✅
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+<script>
+
+
+function placeOrder(){
+
+
+let name =
+document.getElementById("customerName").value;
+
+
+let phone =
+document.getElementById("phone").value;
+
+
+let address =
+document.getElementById("address").value;
+
+
+
+if(name=="" || phone=="" || address==""){
+
+alert("Please fill all information");
+
+}
+
+else{
+
+
+alert(
+"Thank you "+name+
+"! Your order has been received 🚚"
+);
+
+
+localStorage.removeItem("cart");
+
+
+window.location.href="index.html";
+
+
+}
+
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
